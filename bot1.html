@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Care Check-In – Health Assistant</title>
+  <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+  <!-- LEFT: history sidebar -->
+  <aside id="side">
+    <h2>🩺 Care Notes</h2>
+    <button id="newBtn" class="primary" type="button">＋ New Check-In</button>
+    <h3>Past Visits &amp; Chats</h3>
+    <ul id="history"></ul>
+    <button id="clearBtn" class="link" type="button">Clear all history</button>
+    <p class="notice"><b>Medical notice:</b> This tool gives general health information only. It is not a diagnosis and does not replace a licensed doctor. In an emergency call your local emergency number or go to the nearest hospital.</p>
+  </aside>
+
+  <!-- RIGHT: main area -->
+  <div id="main">
+    <div class="top"><button id="menu" type="button" aria-label="Menu">☰</button><span class="status"><i></i> Online</span></div>
+    <div class="head">
+      <div class="banner"><h1>🩺 Care Check-In</h1><p>Plain-language symptom guidance. <b>Tap a symptom</b> or <b>just type</b> how you feel. Type <b>end</b> to finish, or <b>start over</b> any time.</p></div>
+      <form id="searchForm"><input id="q" placeholder="Search a symptom or condition, e.g. cough, fissure, acidity…" aria-label="Search"><button type="submit">Search</button></form>
+    </div>
+    <section id="messages" aria-live="polite"></section>
+    <form id="form" autocomplete="off"><input id="input" placeholder="Tell me how you're feeling… e.g. fever for 2 days" aria-label="Your message"><button type="submit">Send</button></form>
+    <footer>⚠️ For guidance only – not a medical diagnosis. 🩺 Please consult a doctor for any serious, unusual or lasting problem. 🚑 Emergency? Call your local emergency number.</footer>
+  </div>
+  <script src="script1.js"></script>
+</body>
+</html>
